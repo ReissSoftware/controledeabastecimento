@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>Cadastrar veículo</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-radio-group>
+    <ion-item>
+      <ion-label>Carro</ion-label>
+      <ion-radio value="carro" slot="start"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Moto</ion-label>
+      <ion-radio value="moto" slot="start"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+  <ion-item>
+    <ion-select placeholder="Selecione a marca:" okText="Pronto!" cancelText="Cancelar" [(ngModel)]="selectMarca" required="true">
+      <ion-select-option *ngFor="let marca of marcas" [value]="marca">{{ marca.nome }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-select placeholder="Selecione o modelo:" okText="Pronto!" cancelText="Cancelar" [(ngModel)]="selectModelo" required="true">
+      <ion-select-option *ngFor="let modelo of modelos" [value]="modelo">{{ modelo.nome }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Digite a placa do veículo</ion-label>
+    <ion-input inputmode="text" maxlength="3" placeholder="AAA"></ion-input>
+    <ion-label>-</ion-label>
+    <ion-input inputmode="text" maxlength="4" placeholder="1A34"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Digite o ano do veículo</ion-label>
+    <ion-input inputmode="numeric" max="2099" min="1900"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Digite o Km Atual do veículo</ion-label>
+    <ion-input inputmode="numeric"></ion-input>
+  </ion-item>
+</ion-content>
