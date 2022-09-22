@@ -9,4 +9,16 @@
     <ion-label position="floating">Digite seu nome:</ion-label>
     <ion-input autocomplete="name" type="text" [(ngModel)]="inpNomeCadastro" required="true"></ion-input>
   </ion-item>
+  <ion-item>
+    <ion-label position="floating">Digite seu email:</ion-label>
+    <ion-input autocomplete="email" type="email" [(ngModel)]="inpEmailCadastro" required="true"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Digite sua senha:</ion-label>
+    <ion-input type="password" [(ngModel)]="inpSenhaCadastro" required="true"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Confirme sua senha:</ion-label>
+    <ion-input type="password" [(ngModel)]="inpConfSenhaCadastro" required="true"></ion-input>
+  </ion-item>
 </ion-content>
